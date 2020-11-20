@@ -23,6 +23,7 @@ import 'StaggerAnimation.dart';
 import 'FileOperationRoute.dart';
 import 'FutureBuilderRoute.dart';
 import 'WebSocketRoute.dart';
+import 'BaseComponentRoute.dart';
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
@@ -62,6 +63,7 @@ class MyApp extends StatelessWidget {
         "new_page22": (context) => FileOperationRoute(),
         "new_page23": (context) => FutureBuilderRoute(),
         "new_page24": (context) => WebSocketRoute(),
+        "new_page25": (context) => BaseComponentRoute(),
         "/": (context) => MyHomePage(title: 'Flutter Demo Home Page'), //注册首页路由
       },
       // home: new MyHomePage(title: 'Flutter Demo Home Page'),
@@ -304,6 +306,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   textColor: Colors.blue,
                   onPressed: () {
                     Navigator.of(context).pushNamed("new_page24");
+                  },
+                ),
+                FlatButton(
+                  child: Text("萌宠页面展示"),
+                  textColor: Colors.blue,
+                  onPressed: () {
+                    Navigator.of(context).pushNamed("new_page25");
                   },
                 ),
               ],),
