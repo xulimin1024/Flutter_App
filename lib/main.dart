@@ -24,6 +24,7 @@ import 'FileOperationRoute.dart';
 import 'FutureBuilderRoute.dart';
 import 'WebSocketRoute.dart';
 import 'BaseComponentRoute.dart';
+import 'FlutterSwipperRoute.dart';
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
@@ -64,6 +65,7 @@ class MyApp extends StatelessWidget {
         "new_page23": (context) => FutureBuilderRoute(),
         "new_page24": (context) => WebSocketRoute(),
         "new_page25": (context) => BaseComponentRoute(),
+        "new_page26": (context) => flutterSwipperRoute(),
         "/": (context) => MyHomePage(title: 'Flutter Demo Home Page'), //注册首页路由
       },
       // home: new MyHomePage(title: 'Flutter Demo Home Page'),
@@ -313,6 +315,13 @@ class _MyHomePageState extends State<MyHomePage> {
                   textColor: Colors.blue,
                   onPressed: () {
                     Navigator.of(context).pushNamed("new_page25");
+                  },
+                ),
+                FlatButton(
+                  child: Text("轮播图"),
+                  textColor: Colors.blue,
+                  onPressed: () {
+                    Navigator.of(context).pushNamed("new_page26");
                   },
                 ),
               ],),
